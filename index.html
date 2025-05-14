@@ -5,20 +5,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Santolla Designs - Handcrafted luxury furniture in Charlotte, North Carolina. 100% American made with locally sourced hardwoods for over 30 years.">
     <title>Santolla Designs - Handcrafted American Luxury Furniture</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Open Graph Meta Tags for social sharing -->
-    <meta property="og:title" content="Santolla Designs - Handcrafted American Luxury Furniture">
-    <meta property="og:description" content="Fine handcrafted furniture made with locally sourced hardwood in Charlotte, NC for over 30 years.">
-    <meta property="og:image" content="https://santolladesigns.github.io/images/og-image.jpg">
-    <meta property="og:url" content="https://santolladesigns.github.io">
-    <meta property="og:type" content="website">
+    <style>
+        /* Inline CSS to ensure styling works */
+        :root {
+            --primary-color: #5a3921;
+            --secondary-color: #d4bc9a;
+            --accent-color: #8c6c4a;
+            --light-color: #f2efe6;
+            --dark-color: #2c2016;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            height: 90vh;
+            background-color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--light-color);
+            margin-left: 1rem;
+        }
+
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            display: inline-block;
+            position: relative;
+        }
+
+        .about {
+            background-color: white;
+        }
+
+        .collections {
+            background-color: var(--light-color);
+        }
+
+        .process {
+            background-color: white;
+        }
+
+        .testimonials {
+            background-color: var(--light-color);
+        }
+
+        .contact {
+            background-color: white;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 3rem 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -55,17 +229,8 @@
             <div class="section-title">
                 <h2>Our Heritage</h2>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>30 Years of Excellence in Fine Furniture</h3>
-                    <p>For over three decades, Santolla Designs has been crafting exceptional pieces that combine timeless design with uncompromising quality. Established in 1994, our family-owned business started with a simple mission: to create furniture that becomes more beautiful with age and stands as a testament to American craftsmanship.</p>
-                    <p>Every piece we create is 100% American made, handcrafted in our Charlotte workshop by master artisans who have dedicated their lives to the art of fine woodworking. We source all of our hardwoods locally from sustainable North Carolina forests, ensuring that our environmental footprint remains minimal while supporting local economies.</p>
-                    <p>Our commitment to quality means that we never rush production or cut corners. Each piece receives the time and attention it deserves, resulting in furniture that will be cherished for generations to come.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/craftsman.jpg" alt="Craftsman working on fine furniture" />
-                </div>
-            </div>
+            <p style="text-align: center; margin-bottom: 2rem;">For over three decades, Santolla Designs has been crafting exceptional pieces that combine timeless design with uncompromising quality. Established in 1994, our family-owned business started with a simple mission: to create furniture that becomes more beautiful with age and stands as a testament to American craftsmanship.</p>
+            <p style="text-align: center;">Every piece we create is 100% American made, handcrafted in our Charlotte workshop by master artisans who have dedicated their lives to the art of fine woodworking. We source all of our hardwoods locally from sustainable North Carolina forests, ensuring that our environmental footprint remains minimal while supporting local economies.</p>
         </div>
     </section>
 
@@ -75,37 +240,15 @@
             <div class="section-title">
                 <h2>Our Collections</h2>
             </div>
-            <div class="collections-grid">
-                <div class="collection-item">
-                    <div class="collection-image">
-                        <img src="images/heritage-collection.jpg" alt="Heritage Collection" />
-                    </div>
-                    <div class="collection-details">
-                        <h3>Heritage Collection</h3>
-                        <p>Classic designs that honor traditional American craftsmanship with timeless appeal. Crafted from solid cherry and walnut.</p>
-                        <a href="#" class="btn">View Collection</a>
-                    </div>
-                </div>
-                <div class="collection-item">
-                    <div class="collection-image">
-                        <img src="images/modern-collection.jpg" alt="Modern Artisan Collection" />
-                    </div>
-                    <div class="collection-details">
-                        <h3>Modern Artisan</h3>
-                        <p>Contemporary designs that blend clean lines with traditional joinery techniques. Perfect for modern living spaces.</p>
-                        <a href="#" class="btn">View Collection</a>
-                    </div>
-                </div>
-                <div class="collection-item">
-                    <div class="collection-image">
-                        <img src="images/executive-collection.jpg" alt="Executive Collection" />
-                    </div>
-                    <div class="collection-details">
-                        <h3>Executive</h3>
-                        <p>Sophisticated pieces designed for home offices and executive spaces. Featuring rich mahogany and oak.</p>
-                        <a href="#" class="btn">View Collection</a>
-                    </div>
-                </div>
+            <div style="text-align: center;">
+                <h3 style="margin-bottom: 1rem;">Heritage Collection</h3>
+                <p style="margin-bottom: 2rem;">Classic designs that honor traditional American craftsmanship with timeless appeal. Crafted from solid cherry and walnut.</p>
+                
+                <h3 style="margin-bottom: 1rem; margin-top: 3rem;">Modern Artisan</h3>
+                <p style="margin-bottom: 2rem;">Contemporary designs that blend clean lines with traditional joinery techniques. Perfect for modern living spaces.</p>
+                
+                <h3 style="margin-bottom: 1rem; margin-top: 3rem;">Executive</h3>
+                <p style="margin-bottom: 2rem;">Sophisticated pieces designed for home offices and executive spaces. Featuring rich mahogany and oak.</p>
             </div>
         </div>
     </section>
@@ -116,50 +259,12 @@
             <div class="section-title">
                 <h2>Our Craftsmanship</h2>
             </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Select</h3>
-                    <p>We carefully select premium hardwoods sourced from sustainable North Carolina forests.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Design</h3>
-                    <p>Each piece is thoughtfully designed for both beauty and functionality.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Craft</h3>
-                    <p>Master artisans handcraft each piece using traditional joinery techniques.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Finish</h3>
-                    <p>Hand-rubbed finishes enhance the natural beauty of the wood grain.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3>Deliver</h3>
-                    <p>White glove delivery ensures your furniture arrives in perfect condition.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-item">
-                    <p class="testimonial-text">The dining table we purchased from Santolla Designs is truly a masterpiece. The attention to detail is remarkable, and the quality of craftsmanship is evident in every aspect. It has become the centerpiece of our home.</p>
-                    <div class="testimonial-author">
-                        Robert & Sarah Johnson
-                        <span>Charlotte, NC</span>
-                    </div>
-                </div>
+            <div style="text-align: center;">
+                <p style="margin-bottom: 2rem;">We carefully select premium hardwoods sourced from sustainable North Carolina forests.</p>
+                <p style="margin-bottom: 2rem;">Each piece is thoughtfully designed for both beauty and functionality.</p>
+                <p style="margin-bottom: 2rem;">Master artisans handcraft each piece using traditional joinery techniques.</p>
+                <p style="margin-bottom: 2rem;">Hand-rubbed finishes enhance the natural beauty of the wood grain.</p>
+                <p style="margin-bottom: 2rem;">White glove delivery ensures your furniture arrives in perfect condition.</p>
             </div>
         </div>
     </section>
@@ -170,68 +275,17 @@
             <div class="section-title">
                 <h2>Get In Touch</h2>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Visit Our Showroom</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i>📍</i>
-                            <div class="contact-text">
-                                <p>123 Craftsmanship Way</p>
-                                <p>Charlotte, NC 28202</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i>📞</i>
-                            <div class="contact-text">
-                                <p>(704) 555-6789</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i>✉️</i>
-                            <div class="contact-text">
-                                <p>info@santolladesigns.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i>🕒</i>
-                            <div class="contact-text">
-                                <p>Monday - Friday: 10am - 6pm</p>
-                                <p>Saturday: 10am - 4pm</p>
-                                <p>Sunday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link">FB</a>
-                        <a href="#" class="social-link">IG</a>
-                        <a href="#" class="social-link">PT</a>
-                        <a href="#" class="social-link">HZ</a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn">Send Message</button>
-                        </div>
-                    </form>
-                </div>
+            <div style="text-align: center;">
+                <h3 style="margin-bottom: 2rem;">Visit Our Showroom</h3>
+                <p style="margin-bottom: 1rem;">123 Craftsmanship Way</p>
+                <p style="margin-bottom: 1rem;">Charlotte, NC 28202</p>
+                <p style="margin-bottom: 1rem;">(704) 555-6789</p>
+                <p style="margin-bottom: 2rem;">info@santolladesigns.com</p>
+                
+                <h3 style="margin-top: 3rem; margin-bottom: 1rem;">Hours</h3>
+                <p style="margin-bottom: 0.5rem;">Monday - Friday: 10am - 6pm</p>
+                <p style="margin-bottom: 0.5rem;">Saturday: 10am - 4pm</p>
+                <p style="margin-bottom: 1rem;">Sunday: Closed</p>
             </div>
         </div>
     </section>
@@ -239,48 +293,14 @@
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <div class="footer-column">
-                <h4>Santolla Designs</h4>
+            <div style="text-align: center;">
+                <h4 style="margin-bottom: 1rem;">Santolla Designs</h4>
                 <p>Handcrafting heirloom quality furniture in Charlotte, North Carolina for over 30 years. 100% American made with locally sourced hardwoods. The Santolla family continues a tradition of excellence in every piece we create.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#collections">Collections</a></li>
-                    <li><a href="#process">Craftsmanship</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Collections</h4>
-                <ul>
-                    <li><a href="#">Heritage Collection</a></li>
-                    <li><a href="#">Modern Artisan</a></li>
-                    <li><a href="#">Executive</a></li>
-                    <li><a href="#">Custom Pieces</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Newsletter</h4>
-                <p>Subscribe to receive updates on new collections and special events.</p>
-                <form id="newsletterForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email Address" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn">Subscribe</button>
-                    </div>
-                </form>
             </div>
             <div class="copyright">
                 <p>&copy; 2025 Santolla Designs. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
 </body>
 </html>
